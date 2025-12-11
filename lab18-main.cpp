@@ -1,4 +1,7 @@
+
 #include "GraphMatrix.hpp"
+#include "Graph.hpp"
+
 
 void createGraph(Graph*&);
 void checkGraphType(Graph*);
@@ -11,7 +14,7 @@ void printGraph(Graph*);
 int main() {
     // variables
     const int EXIT_VALUE = 8;
-    Graph*    gPtr       = nullptr;
+    Graph*   gPtr = nullptr;
     int       userChoice = 0;
 
     // menu loop
@@ -84,6 +87,7 @@ void createGraph(Graph*& gPtr) {
 
     delete gPtr;
     gPtr = new GraphMatrix(numV, static_cast<Graph::GType>(b));
+    cout << "doesnt work";
 }
 
 void checkGraphType(Graph* gPtr) {
